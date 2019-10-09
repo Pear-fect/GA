@@ -1,0 +1,85 @@
+/* GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+img{
+    width: 30vw;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    background-color: #515151;
+    height: 100vh;
+    width: 3vw;
+    position: fixed;
+    transition: all .2s linear;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.extended{
+    display: none;
+}
+
+.toggle{
+    color: white;
+    font-size: 2vw;
+}
+
+.sidebar:hover{
+    width: 15vw;
+}
+
+.sidebar:hover .toggle{
+    display: none;
+}
+
+.sidebar:hover .extended{
+    display: contents;
+}
+
+/* PANELS */
+
+.panel{
+    height: 50vh;
+    width: 97vw;
+    margin-left: 3vw;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.panel p{
+    width: 50%;
+    font-size: 2vw;
+    color: #515151;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SIMS */
+
+iframe{
+    width: 30vw;
+    height: 100%;
+}
