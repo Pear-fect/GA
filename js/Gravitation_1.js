@@ -1,4 +1,5 @@
 let fps;
+let scheme;
 let balls = [];
 let mass = 50;
 let count = 0;
@@ -6,6 +7,7 @@ let mouseOrigin;
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
+  scheme = new Colors();
 }
 
 function windowResized() {
@@ -36,7 +38,7 @@ function draw() {
     count++;
     ellipse(mouseOrigin.x, mouseOrigin.y, count);
     push();
-    stroke(255);
+    stroke(scheme.accent);
     line(mouseOrigin.x, mouseOrigin.y, mouseX, mouseY)
     pop();
   }
@@ -66,7 +68,7 @@ function draw() {
   if (balls.length > 0) {
     for (let i = 0; i < balls.length; i++) {
       balls[i].update();
-      balls[i].show();
+      balls[i].show(scheme);
     }
   }
 }

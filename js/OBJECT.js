@@ -17,8 +17,9 @@ class OBJECT {
         this.acc = createVector(0, 0);
     }
 
-    show() {
+    show(scheme) {
         noStroke();
+        fill(scheme.secondary);
         ellipse(this.pos.x, this.pos.y, sqrt(this.mass));
         push();
         stroke(0);

@@ -20,10 +20,14 @@ img{
     width: 30vw;
 }
 
+body{
+    background-color: #F8F8F8;
+}
+
 /* SIDEBAR */
 
 .sidebar{
-    background-color: #515151;
+    background-color: #7E9DC2;
     height: 100vh;
     width: 3vw;
     position: fixed;
@@ -70,7 +74,7 @@ img{
 .panel p{
     width: 50%;
     font-size: 2vw;
-    color: #515151;
+    color: #7E9DC2;
     
     display: flex;
     justify-content: center;
