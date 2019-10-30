@@ -1,9 +1,10 @@
-let fps;
+let fps = [];
 let scheme;
 let balls = [];
 let mass = 50;
 let count = 0;
 let mouseOrigin;
+var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
@@ -23,16 +24,13 @@ function mousePressed() {
   mouseOrigin = createVector(mouseX, mouseY);
 }
 
+function myCallback() {
+  fps.push(frameRate().toFixed(2))
+  console.log(fps)
+}
+
 function draw() {
   background(37);
-
-  fps = frameRate();
-  push();
-  textSize(32);
-  stroke(255);
-  fill(255);
-  text(fps.toFixed(2), 40, 40);
-  pop();
 
   if (mouseIsPressed) {
     count++;

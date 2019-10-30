@@ -4,6 +4,7 @@ let w;
 let sliderW;
 let sliderB;
 let count = 0;
+var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {
     createCanvas(innerWidth, innerHeight);
@@ -22,6 +23,11 @@ function mouseReleased() {
     balls.push(new Ball(width/2, 0, 30));
 }
 */
+function myCallback() {
+    fps.push(frameRate().toFixed(2))
+    console.log(fps)
+}
+
 function draw() {
     background(37);
 

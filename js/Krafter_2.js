@@ -2,6 +2,7 @@ let ball;
 let g;
 let f = 100000;
 let clicked = false;
+var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {
     createCanvas(innerWidth, innerHeight);
@@ -11,6 +12,11 @@ function setup() {
 
 function mousePressed() {
     clicked = true;
+}
+
+function myCallback() {
+    fps.push(frameRate().toFixed(2))
+    console.log(fps)
 }
 
 function draw() {
@@ -23,7 +29,7 @@ function draw() {
     fill(255);
     text(fps.toFixed(2), 40, 40);
     pop();
-    
+
     if (clicked) {
         clicked = false;
         angleMode(DEGREES);
