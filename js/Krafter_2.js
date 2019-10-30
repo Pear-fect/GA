@@ -22,14 +22,6 @@ function myCallback() {
 function draw() {
     background(37);
 
-    fps = frameRate();
-    push();
-    textSize(32);
-    stroke(255);
-    fill(255);
-    text(fps.toFixed(2), 40, 40);
-    pop();
-
     if (clicked) {
         clicked = false;
         angleMode(DEGREES);

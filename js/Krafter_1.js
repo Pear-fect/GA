@@ -31,14 +31,6 @@ function myCallback() {
 function draw() {
     background(37);
 
-    fps = frameRate();
-    push();
-    textSize(32);
-    stroke(255);
-    fill(255);
-    text(fps.toFixed(2), 40, 40);
-    pop();
-
     push();
     stroke(255);
     line(0, innerHeight * 0.25, width, innerHeight * 0.25);
