@@ -2,6 +2,7 @@ let ball;
 let g;
 let f = 100000;
 let clicked = false;
+let fps = [];
 var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {

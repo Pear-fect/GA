@@ -4,6 +4,7 @@ let w;
 let sliderW;
 let sliderB;
 let count = 0;
+let fps = [];
 var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {

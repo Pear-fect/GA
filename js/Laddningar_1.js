@@ -3,6 +3,7 @@ let charges = [];
 let chargesL = [];
 let chr = false;
 let size = 20;
+let fps = [];
 var intervalID = window.setInterval(myCallback, 10000);
 
 function setup() {
