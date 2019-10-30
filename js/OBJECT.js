@@ -7,8 +7,7 @@ class OBJECT {
     }
 
     applyForce(force) {
-        let accel = p5.Vector.div(force, this.mass);
-        this.acc.add(accel);
+        this.acc.add(createVector(force.x / this.mass, force.y / this.mass))
     }
 
     update() {
