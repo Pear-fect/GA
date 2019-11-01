@@ -18,10 +18,11 @@ class OBJECT {
 
     show(scheme) {
         noStroke();
-        fill(scheme.secondary);
+        fill(scheme.accent);
         ellipse(this.pos.x, this.pos.y, sqrt(this.mass));
         push();
         stroke(0);
+        fill(0)
         textAlign(CENTER);
         text(this.mass, this.pos.x, this.pos.y);
         pop();

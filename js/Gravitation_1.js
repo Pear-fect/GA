@@ -10,6 +10,7 @@ var intervalID = window.setInterval(myCallback, 10000);
 function setup() {
   createCanvas(innerWidth, innerHeight);
   scheme = new Colors();
+  fill(scheme.accent)
 }
 
 function windowResized() {
@@ -40,7 +41,7 @@ function draw() {
     count++;
     ellipse(mouseOrigin.x, mouseOrigin.y, count);
     push();
-    stroke(scheme.accent);
+    stroke(scheme.secondary);
     line(mouseOrigin.x, mouseOrigin.y, mouseX, mouseY)
     pop();
   }
