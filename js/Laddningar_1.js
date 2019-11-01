@@ -1,6 +1,7 @@
 let Arrows = [];
 let charges = [];
 let chargesL = [];
+let fpsCount = 0;
 let chr = false;
 let size = 20;
 let fps = [];
@@ -29,8 +30,11 @@ function keyPressed() {
 }
 
 function myCallback() {
-    fps.push(frameRate().toFixed(2))
-    console.log(fps)
+    if (fpsCount < 60) {
+        fps.push(frameRate().toFixed(2))
+        console.log(fps)
+        fpsCount++
+    }
 }
 
 function draw() {
@@ -55,9 +59,10 @@ function draw() {
 }
 
 function createVectors() {
-    for (let i = 0; i < width / 5; i += 5) {
-        for (let j = 0; j < height / 5; j += 5) {
-            Arrows.push(new Arrow(i * 5, j * 5));
+    let setSize = 5;
+    for (let i = 0; i < width / setSize; i += setSize) {
+        for (let j = 0; j < height / setSize; j += setSize) {
+            Arrows.push(new Arrow(i * setSize, j * setSize));
         }
     }
 }

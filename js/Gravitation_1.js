@@ -1,4 +1,5 @@
 let fps = [];
+let fpsCount = 0;
 let scheme;
 let balls = [];
 let mass = 50;
@@ -25,8 +26,11 @@ function mousePressed() {
 }
 
 function myCallback() {
-  fps.push(frameRate().toFixed(2))
-  console.log(fps)
+  if (fpsCount <= 60) {
+    fps.push(frameRate().toFixed(2))
+    console.log(fps)
+    fpsCount++
+  }
 }
 
 function draw() {

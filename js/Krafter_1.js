@@ -1,4 +1,5 @@
 let balls = [];
+let fpsCount = 0;
 let g;
 let w;
 let sliderW;
@@ -25,8 +26,11 @@ function mouseReleased() {
 }
 */
 function myCallback() {
-    fps.push(frameRate().toFixed(2))
-    console.log(fps)
+    if (fpsCount <= 60) {
+        fps.push(frameRate().toFixed(2))
+        console.log(fps)
+        fpsCount++
+      }
 }
 
 function draw() {
