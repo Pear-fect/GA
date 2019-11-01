@@ -32,7 +32,6 @@ class OBJECT {
         angleMode(DEGREES);
         var G = 6.674 * Math.pow(10, -11);
         var SCALE = 10000;
-
         var xd = (this.pos.x - obj.pos.x) / SCALE;
         var yd = (this.pos.y - obj.pos.y) / SCALE;
         var r = (xd * xd) + (yd * yd);
