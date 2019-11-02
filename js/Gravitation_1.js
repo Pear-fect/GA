@@ -5,7 +5,7 @@ let balls = []
 let mass = 50
 let count = 0
 let mouseOrigin
-var intervalID = window.setInterval(myCallback, 10000)
+var interval = window.setInterval(callBack, 10000)
 
 function setup() {
   createCanvas(innerWidth, innerHeight)
@@ -26,7 +26,7 @@ function mousePressed() {
   mouseOrigin = createVector(mouseX, mouseY)
 }
 
-function myCallback() {
+function callBack() {
   if (fpsCount <= 60) {
     fps.push(frameRate().toFixed(2))
     console.log(fps)

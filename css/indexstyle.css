@@ -71,7 +71,7 @@ body{
     justify-content: space-evenly;
 }
 
-.panel p{
+.panel div{
     width: 50%;
     font-size: 2vw;
     color: #7E9DC2;
@@ -79,6 +79,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.panel span{
+    color:white;
+    background-color: #7E9DC2;
+    justify-self: end;
+    padding: 3%;
 }
 
 /* SIMS */
