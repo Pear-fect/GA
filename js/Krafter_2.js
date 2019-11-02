@@ -4,6 +4,7 @@ let fps = []
 let g = 9.82
 let f = 1000
 let fpsCount = 0
+let push = true
 var intervalID = window.setInterval(myCallback, 10000)
 
 function setup() {
@@ -11,11 +12,19 @@ function setup() {
     ball = new Ball(width / 2, height / 2, 100)
 }
 
+function keyPressed() {
+    if (keyCode === SHIFT && push == true) {
+        push = false
+    } else if (keyCode === SHIFT && push == false) {
+        push = true
+    }
+}
+
 function mousePressed() {
-    if (mouseButton == 'left') {
+    if (push) {
         var a = atan2(ball.pos.y - mouseY, ball.pos.x - mouseX)
         ball.applyForce(createVector(f * cos(a), f * sin(a)))
-    } else if (mouseButton == 'right') {
+    } else {
         var a = atan2(ball.pos.y - mouseY, ball.pos.x - mouseX)
         ball.applyForce(createVector(-f * cos(a), -f * sin(a)))
     }
