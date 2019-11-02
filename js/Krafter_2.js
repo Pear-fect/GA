@@ -17,6 +17,9 @@ function keyPressed() {
         push = false
     } else if (keyCode === SHIFT && push == false) {
         push = true
+    } else if (keyCode === ENTER) {
+        ball.pos = createVector(width / 2, height / 2)
+        ball.vel = createVector(0, 0)
     }
 }
 
