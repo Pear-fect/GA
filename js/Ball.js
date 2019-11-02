@@ -18,7 +18,6 @@ class Ball {
     }
 
     show() {
-        noStroke();
         ellipse(this.pos.x, this.pos.y, sqrt(this.mass));
     }
 

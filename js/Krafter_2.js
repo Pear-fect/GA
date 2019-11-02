@@ -45,6 +45,15 @@ function draw() {
     background(37)
     ball.applyForce(createVector(0, g))
 
+    if (push) {
+        fill(255)
+        ellipse(mouseX, mouseY, 25)
+    } else {
+        noFill()
+        stroke(255)
+        ellipse(mouseX, mouseY, 25)
+    }
+
     if (ball.pos.x >= width) {
         ball.vel.x = -ball.vel.x
         ball.vel.div(elast)
