@@ -1,5 +1,5 @@
 let ball
-let elast = 1.3
+let elast = 1.2
 let fps = []
 let g = 9.82
 let f = 1000
@@ -57,18 +57,22 @@ function draw() {
     if (ball.pos.x >= width) {
         ball.vel.x = -ball.vel.x
         ball.vel.div(elast)
+        ball.pos.x = width
     }
     if (ball.pos.x <= 0) {
         ball.vel.x = -ball.vel.x
         ball.vel.div(elast)
+        ball.pos.x = 0
     }
     if (ball.pos.y >= height) {
         ball.vel.y = -ball.vel.y
         ball.vel.div(elast)
+        ball.pos.y = height
     }
     if (ball.pos.y <= 0) {
         ball.vel.y = -ball.vel.y
         ball.vel.div(elast)
+        ball.pos.y = 0
     }
 
     ball.update()
