@@ -1,32 +1,32 @@
 /* GLOBAL */
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
     font-size: 2vw;
 }
 
-img{
+img {
     width: 30vw;
 }
 
-body{
+body {
     background-color: #F8F8F8;
 }
 
 /* SIDEBAR */
 
-.sidebar{
+.sidebar {
     background-color: #7E9DC2;
     height: 100vh;
     width: 3vw;
@@ -39,30 +39,30 @@ body{
     align-items: center;
 }
 
-.extended{
+.extended {
     display: none;
 }
 
-.toggle{
+.toggle {
     color: white;
     font-size: 2vw;
 }
 
-.sidebar:hover{
+.sidebar:hover {
     width: 15vw;
 }
 
-.sidebar:hover .toggle{
+.sidebar:hover .toggle {
     display: none;
 }
 
-.sidebar:hover .extended{
+.sidebar:hover .extended {
     display: contents;
 }
 
 /* PANELS */
 
-.panel{
+.panel {
     height: 50vh;
     width: 97vw;
     margin-left: 3vw;
@@ -71,27 +71,41 @@ body{
     justify-content: space-evenly;
 }
 
-.panel div{
+.panel div {
     width: 50%;
     font-size: 2vw;
     color: #7E9DC2;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.panel span{
-    color:white;
+.panel span {
+    color: white;
     background-color: #7E9DC2;
     justify-self: end;
     padding: 3%;
 }
 
+#Start {
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20rem;
+    color: #FEDA15;
+}
+
+.subtitle {
+    font-size: 5rem;
+}
+
 /* SIMS */
 
-iframe{
+iframe {
     width: 30vw;
     height: 100%;
 }
