@@ -12,6 +12,10 @@ function setup() {
     ball = new Ball(width / 2, height / 2, 100)
 }
 
+function windowResized() {
+    resizeCanvas(innerWidth, innerHeight)
+}
+
 function keyPressed() {
     if (keyCode === SHIFT && push == true) {
         push = false
