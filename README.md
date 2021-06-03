@@ -1,3 +1,3 @@
 Gymnasie arbete
 
-Länk: https://pear-fect.github.io/GA/
+Länk: https://ebbearildsson.github.io/GA/
